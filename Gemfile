@@ -41,6 +41,10 @@ gem 'faker'
 gem 'haml-rails', '~> 2.0'
 gem 'html2haml'
 
+# エラーメッセージの表示方法を変更
+gem 'better_errors'
+gem 'binding_of_caller'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[ mri windows ], require: 'debug/prelude'
