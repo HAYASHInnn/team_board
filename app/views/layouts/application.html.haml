@@ -22,6 +22,8 @@
             = image_tag "back.svg", class: "header_back"
         %p.header_pageTitle
           = link_to 'Boards', root_path
+      .dropdown
+        = image_tag 'avatar.png', class: "header_avatar dropbtn"
     %p.notice= notice
     %p.alert= alert
     = yield

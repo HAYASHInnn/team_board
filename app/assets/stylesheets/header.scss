@@ -22,10 +22,9 @@ $back-icon-size: 16px;
     display: flex;
 
     img {
-      cursor: pointer;
       width: $back-icon-size;
       height: $back-icon-size;
-      margin: ($avatar-size - $back-icon-size) / 2 10px 0;
+      margin: 10px 10px 0;
     }
   }
 
@@ -33,5 +32,12 @@ $back-icon-size: 16px;
     line-height: $avatar-size;
     font-size: 18px;
   }
-}
 
+  &_avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
+    display: flex;
+    align-items: center; 
+  }
+}
