@@ -1,21 +1,10 @@
 .container
   %h2 All Boards
-  .card
-    .card_content
-      .card_detail
-        .card_title
-          Brackets
-        .card_description
-          Saving money – is something we would all like.
-        .card_avatar
-          = image_tag 'avatar.png'
-      .dropdown
-        = image_tag 'actions.svg', class: 'dropbtn'
-        .dropdown-content.mini
-          = link_to "Edit"
-          = link_to "Delete"
+  - @boards.each do |board|
+    = render "board", board: board
 
-  .card-add
-    .card-add_content
+  = link_to new_board_path do
+    .card-add
+      .card-add_content
       %span.plus-icon +
       %span.add-text Add new board

@@ -1,5 +1,14 @@
-= link_to board_path(board) do
-  .card
-    .card_content
+.card
+  .card_content
+    .card_detail
       .card_title
         = board.title
+      .card_description
+        = board.description
+      .card_avatar
+        = image_tag 'avatar.png'
+    .dropdown
+      = image_tag 'actions.svg', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to "Edit"
+        = link_to "Delete"
