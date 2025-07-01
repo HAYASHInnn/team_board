@@ -6,9 +6,9 @@
     .profilePage_user_basicInfo
       .profilePage_user_name
         .profilePage_user_displayName
-          john
+          = current_user.display_name
       .profilePage_user_introduction
-        こんにちは！
+        = current_user.introduction
     .profilePage_user_actionButton
       = link_to 'Edit', edit_profile_path
 
