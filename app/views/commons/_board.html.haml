@@ -6,7 +6,7 @@
       .card_description
         = board.description
       .card_avatar
-        = image_tag 'avatar.png'
+        = image_tag current_user.avatar_image
     .dropdown
       = image_tag 'actions.svg', class: 'dropbtn'
       .dropdown-content.mini
