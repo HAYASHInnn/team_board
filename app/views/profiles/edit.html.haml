@@ -4,7 +4,7 @@
     - @profile.errors.full_messages.each do |message|
       %li= message
   = form_with(model: @profile, url: profile_path, method: "put", local: true) do |f|
-    .field_top
+    .field_spacious
       = f.label :avatar, "Avatar"
       %br/
       = f.file_field :avatar
@@ -16,7 +16,7 @@
       = f.label :introduction, "Introduction"
       %br/
       = f.text_area :introduction
-    .field_top
+    .field_spacious
       = f.label :gender, "Gender"
       %br/
       = f.select :gender, Profile.genders.map { |k, v| [ I18n.t("enum.genders.#{k}"), k ]}, {}, { class: 'text' }
