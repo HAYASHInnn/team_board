@@ -2,6 +2,10 @@
 @import "variables";
 @import "form";
 @import "buttons";
+@import "card";
+@import "common";
+@import 'profile';
+@import "flash";
 
 html {
   word-spacing: 1px;
@@ -31,6 +35,7 @@ body {
 a {
   text-decoration: none;
   color: $text-base-color;
+  cursor: pointer;
 }
 
 h2 {

@@ -1,0 +1,14 @@
+.card
+  .card_content
+    .card_detail
+      .card_title
+        = board.title
+      .card_description
+        = board.description
+      .card_avatar
+        = image_tag board.user.avatar_image
+    .dropdown
+      = image_tag 'actions.svg', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to "Edit"
+        = link_to "Delete"

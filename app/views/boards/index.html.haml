@@ -1,0 +1,10 @@
+.container
+  %h2 All Boards
+  - @boards.each do |board|
+    = render "commons/board", board: board
+
+  = link_to new_board_path do
+    .card-add
+      .card-add_content
+      %span.plus-icon +
+      %span.add-text Add new board

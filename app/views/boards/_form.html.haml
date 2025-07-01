@@ -2,7 +2,7 @@
   - board.errors.full_messages.each do |message|
     %li= message
 = form_with(model: board, local: true) do |f|
-  .field_top
+  .field_spacious
     = f.label :title, "Name"
     %br/
     = f.text_field :description, class: "text"

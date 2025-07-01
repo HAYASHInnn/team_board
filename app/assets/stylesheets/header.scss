@@ -2,6 +2,7 @@
 
 $avatar-size: 40px;
 $back-icon-size: 16px;
+$header-font-size: 18px;
 
 .header {
   display: flex;
@@ -13,8 +14,11 @@ $back-icon-size: 16px;
     background-color: $base-bg-color;
     height: $avatar-size;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: $header-font-size;
     padding: 11px 16px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
   }
 
   &_logos {
@@ -22,16 +26,29 @@ $back-icon-size: 16px;
     display: flex;
 
     img {
-      cursor: pointer;
       width: $back-icon-size;
       height: $back-icon-size;
-      margin: ($avatar-size - $back-icon-size) / 2 10px 0;
+      margin: 10px 10px 0;
     }
   }
 
   &_pageTitle {
     line-height: $avatar-size;
-    font-size: 18px;
+    font-size: $header-font-size;
+  }
+
+  &_avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  // ヘッダー専用ドロップダウン
+  .dropdown-content {
+    min-width: 80px;
+    right: 0;
+    top: 100%;
   }
 }
-
