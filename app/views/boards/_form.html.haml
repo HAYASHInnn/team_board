@@ -1,13 +1,13 @@
-%ul
-  - board.errors.full_messages.each do |message|
-    %li= message
+- if board.errors.any?
+  %ul.error-messages
+    - board.errors.full_messages.each do |message|
+      %li= message
+
 = form_with(model: board, local: true) do |f|
   .field_spacious
     = f.label :title, "Name"
-    %br/
-    = f.text_field :description, class: "text"
-  .field
+    = f.text_field :title, class: "text"
+  .field_spacious
     = f.label :description, "Description"
-    %br/
     = f.text_area :description
   = f.submit "Submit", class: "btn-primary"

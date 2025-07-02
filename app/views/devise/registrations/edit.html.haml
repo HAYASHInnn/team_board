@@ -5,7 +5,6 @@
     = render "devise/shared/error_messages", resource: resource
     .field_spacious
       = f.label :email, 'Email'
-      %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text'
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
       %div
@@ -13,7 +12,6 @@
     .field
       = f.label :password, 'Password'
       %i (leave blank if you don't want to change it)
-      %br/
       = f.password_field :password, autocomplete: "new-password", class: 'text'
       - if @minimum_password_length
         %br/
@@ -22,12 +20,10 @@
           characters minimum
     .field
       = f.label :password_confirmation, 'Password Confirmation'
-      %br/
       = f.password_field :password_confirmation, autocomplete: "new-password", class: 'text'
     .field
       = f.label :current_password
       %i (we need your current password to confirm your changes)
-      %br/
       = f.password_field :current_password, autocomplete: "current-password", class: 'text'
     .actions
       = f.submit "Update", class: 'btn-primary'
