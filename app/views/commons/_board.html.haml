@@ -7,8 +7,9 @@
         = board.description
       .card_avatar
         = image_tag board.user.avatar_image
-    .dropdown
-      = image_tag 'actions.svg', class: 'dropbtn'
-      .dropdown-content.mini
-        = link_to "Edit"
-        = link_to "Delete"
+    - if user_signed_in? && current_user.written_by_me?(board)
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown-content.mini
+          = link_to "Edit", edit_board_path(board)
+          = link_to "Delete"
