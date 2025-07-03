@@ -27,6 +27,10 @@ class User < ApplicationRecord
 
   delegate :birthday, :age, :gender, :introduction, to: :profile, allow_nil: true
 
+  def written_by_me?(board)
+    self.id == board.user_id
+  end
+
   def display_name
     profile&.nickname || self.email.split('@').first
   end

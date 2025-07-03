@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
     def index
-        @boards = Board.all
+        @boards = Board.all.order(id: :asc)
     end
 
     def show
@@ -17,6 +17,20 @@ class BoardsController < ApplicationController
         else
             flash.now[:error] = '保存に失敗しました'
             render :new, status: :unprocessable_entity
+        end
+    end
+
+    def edit
+        @board = current_user.boards.find(params[:id])
+    end
+
+    def update
+        @board = current_user.boards.find(params[:id])
+        if @board.update(board_params)
+            redirect_to boards_path(@board), notice: '更新できました'
+        else
+            flash.now[:error] = '更新できませんでした'
+            render :edit, status: :unprocessable_entity
         end
     end
 
