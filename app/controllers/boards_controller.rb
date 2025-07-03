@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
     def index
-        @boards = Board.all
+        @boards = Board.all.order(id: :asc)
     end
 
     def show
