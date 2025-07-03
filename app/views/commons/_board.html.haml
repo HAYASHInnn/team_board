@@ -12,4 +12,4 @@
         = image_tag 'actions.svg', class: 'dropbtn'
         .dropdown-content.mini
           = link_to "Edit", edit_board_path(board)
-          = link_to "Delete"
+          = link_to "Delete", board_path(board), data: { turbo_method: "delete", turbo_confirm: "本当に削除してもよろしいですか？" }
