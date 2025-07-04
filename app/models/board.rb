@@ -22,5 +22,7 @@ class Board < ApplicationRecord
     validates :description, length: { minimum: 1, maximum: 200 }
     validates :description, uniqueness: true
 
+    has_many :tasks, dependent: :destroy
+
     belongs_to :user
 end
