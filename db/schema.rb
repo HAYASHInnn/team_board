@@ -66,7 +66,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_04_081615) do
   create_table "tasks", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "title", null: false
-    t.text "description", null: false
+    t.text "content", null: false
     t.datetime "deadline", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
