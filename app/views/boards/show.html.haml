@@ -1,2 +1,16 @@
+.container
+  %h2
+    = @board.title
 
-  
+  .card-add
+    .card-add_content
+    %span.plus-icon +
+    %span.add-text Add new card
+
+
+-# 以下は後からBoardに紐付けられたタスクを表示する
+-#   - @boards.each do |board|
+-#     = render "commons/board", board: board
+
+-# 以下は後からタスク追加に変更
+-#   = link_to new_board_path do
