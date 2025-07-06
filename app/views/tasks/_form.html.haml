@@ -13,4 +13,7 @@
   .field_spacious
     = f.label :deadline, "Dead Line"
     = f.datetime_field :deadline, class: "text"
+  .field_spacious
+    = f.label :eyecatch, "Eyecatch"
+    = f.file_field :eyecatch
   = f.submit "Submit", class: "btn-primary"
