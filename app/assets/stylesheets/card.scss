@@ -35,6 +35,29 @@ $avatar-size: 30px;
     color: $text-secondary-color;
   }
 
+  &_bottom {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  &_avatar {
+    flex-shrink: 0;
+  }
+
+  &_deadline {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $text-secondary-color;
+
+    .deadline-label {
+      font-weight: 500;
+      margin-right: 4px;
+    }
+  }
+
   img {
     width: $avatar-size;
     height: $avatar-size;

@@ -1,0 +1,18 @@
+.card
+  .card_content
+    .card_detail
+      .card_title
+        = task.title
+      .card_description
+        = task.content
+      .card_bottom
+        .card_avatar
+          = image_tag task.user.avatar_image
+        .card_deadline
+          = "期限：#{l(task.deadline, format: :long)}"
+    - if user_signed_in? && current_user.written_by_me?(task)
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown-content.mini
+          = link_to "Edit"
+          = link_to "Delete"
