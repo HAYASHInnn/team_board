@@ -2,12 +2,15 @@
   %h2
     = @board.title
 
-  = link_to new_board_task_path(@board.id) do
-    .card-add
-      .card-add_content
-      %span.plus-icon +
-      %span.add-text Add new card
+  .card-add
+    .card-add_content
+    %span.plus-icon +
+    %span.add-text Add new card
 
--# 後からタスクの一覧を表示する
--#   - @tasks.each do |task|
--#     = render "commons/task", task: task
+
+-# 以下は後からBoardに紐付けられたタスクを表示する
+-#   - @boards.each do |board|
+-#     = render "commons/board", board: board
+
+-# 以下は後からタスク追加に変更
+-#   = link_to new_board_path do
