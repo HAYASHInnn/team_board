@@ -10,8 +10,21 @@
   border-radius: 4px;
   font-size: 18px;
   font-family: Avenir;
+
+  // デフォルト: 固定位置（ログイン画面用）
   position: fixed;
   bottom: 35px;
   right: 26px;
   left: 26px;
+
+  // フォーム作成・編集画面では通常の配置に変更
+  .form-container & {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
 }
