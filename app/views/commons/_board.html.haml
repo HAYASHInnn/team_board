@@ -1,16 +1,17 @@
 = link_to board_path(board) do
   .card
     .card_content
-      .card_detail
+      .card_title_row
         .card_title
           = board.title
-        .card_description
-          = board.description
+        - if user_signed_in? && current_user.written_by_me?(board)
+          .dropdown
+            = image_tag 'actions.svg', class: 'dropbtn'
+            .dropdown-content.mini
+              = link_to "Edit", edit_board_path(board)
+              = link_to "Delete", board_path(board), data: { turbo_method: "delete", turbo_confirm: "本当に削除してもよろしいですか？" }
+      .card_description
+        = board.description
+      .card_bottom
         .card_avatar
           = image_tag board.user.avatar_image
-      - if user_signed_in? && current_user.written_by_me?(board)
-        .dropdown
-          = image_tag 'actions.svg', class: 'dropbtn'
-          .dropdown-content.mini
-            = link_to "Edit", edit_board_path(board)
-            = link_to "Delete", board_path(board), data: { turbo_method: "delete", turbo_confirm: "本当に削除してもよろしいですか？" }
