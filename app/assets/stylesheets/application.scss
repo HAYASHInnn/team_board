@@ -41,6 +41,10 @@ a {
 h2 {
   margin-bottom: 30px;
   font-size: 26px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .container {
