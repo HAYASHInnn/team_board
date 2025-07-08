@@ -1,0 +1,55 @@
+@import "./variables";
+@import "./card";
+
+.task_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &_actions {
+    position: absolute;
+    right: 0;
+    top: -3px;
+    z-index: 10; // ドロップダウンが他の要素の上に表示されるように
+  }
+}
+
+.task_image {
+  width: 100%;
+  height: 170px;
+  margin-bottom: 26px;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // アスペクト比を保ちながら領域を埋める
+    object-position: center; // 中央を基準に切り抜く
+  }
+}
+
+.task_detail {
+  @extend .card-base;
+  background-color: $primary-color;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.task_deadline {
+  color: $text-secondary-color;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.task_comment {
+  font-size: 26px;
+}
