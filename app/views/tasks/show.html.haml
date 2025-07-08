@@ -7,7 +7,7 @@
           .dropdown
             = image_tag 'actions.svg', class: 'dropbtn'
             .dropdown-content.mini
-              = link_to "Edit"
+              = link_to "Edit", edit_board_task_path(@task.board, @task)
               = link_to "Delete"
   - if @task.eyecatch.attached?
     .task_image

@@ -1,0 +1,3 @@
+.form-container
+  %h2 Edit Card
+  = render "form", task: @task, url: board_task_path(@task.board, @task)

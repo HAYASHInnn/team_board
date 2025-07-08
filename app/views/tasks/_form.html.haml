@@ -3,7 +3,7 @@
     - task.errors.full_messages.each do |message|
       %li= message
 
-= form_with(model: task, url: board_tasks_path(task.board), local: true) do |f|
+= form_with(model: task, url: url, local: true) do |f|
   .field_spacious
     = f.label :title, "Name"
     = f.text_field :title, class: "text"
