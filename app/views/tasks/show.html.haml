@@ -1,0 +1,22 @@
+.container
+  .task_header
+    %h2
+      = @task.title
+      - if user_signed_in? && current_user.written_by_me?(@task)
+        .task_header_actions
+          .dropdown
+            = image_tag 'actions.svg', class: 'dropbtn'
+            .dropdown-content.mini
+              = link_to "Edit"
+              = link_to "Delete"
+  - if @task.eyecatch.attached?
+    .task_image
+      = image_tag @task.eyecatch
+  .task_detail
+    .task_deadline
+      = "期限：#{l(@task.deadline, format: :long)}"
+    .task_content
+      = @task.content
+
+  .task_comment
+    %div Comment
