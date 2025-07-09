@@ -18,5 +18,17 @@
     .task_content
       = @task.content
 
-  .task_comment
+  .task-comment
     %div Comment
+    - @comments.each do |comment|
+      .task-comment-detail
+        .task-comment_avatar
+          = image_tag comment.user.avatar_image
+        .task-comment_content
+          = comment.content
+
+    = link_to new_board_task_comment_path(@task.board, @task) do
+      .card-add.comment
+        .card-add_content
+        %span.plus-icon +
+        %span.add-text Add new comment
