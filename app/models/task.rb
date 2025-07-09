@@ -17,6 +17,8 @@
 #  index_tasks_on_user_id   (user_id)
 #
 class Task < ApplicationRecord
+    has_many :comments, dependent: :destroy
+
     has_one_attached :eyecatch
 
     validates :title, presence: true

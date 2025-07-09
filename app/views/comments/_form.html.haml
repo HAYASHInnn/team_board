@@ -1,0 +1,9 @@
+- if comment.errors.any?
+  %ul.error-messages
+    - comment.errors.full_messages.each do |message|
+      %li= message
+
+= form_with(model: comment, url: url, local: true) do |f|
+  .field_spacious
+    = f.text_area :content
+  = f.submit "Submit", class: "btn-primary"

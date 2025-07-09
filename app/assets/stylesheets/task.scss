@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./card";
 
+$avatar-size: 40px;
+
 .task_header {
   display: flex;
   justify-content: space-between;
@@ -50,6 +52,27 @@
   margin-bottom: 6px;
 }
 
-.task_comment {
+.task-comment {
   font-size: 26px;
+
+  &_avatar {
+    flex-shrink: 0;
+
+    img {
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+    }
+  }
+
+  &_content {
+    margin-left: 16px;
+  }
+}
+
+.task-comment-detail {
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0px;
+  margin: 26px 0;
 }

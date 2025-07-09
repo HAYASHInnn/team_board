@@ -102,4 +102,9 @@ $avatar-size: 30px;
   &_content {
     font-size: 18px;
   }
+  &.comment {
+    height: 60px;
+    min-height: 60px;
+    font-size: 14px;
+  }
 }
