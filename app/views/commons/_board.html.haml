@@ -13,7 +13,7 @@
   - if user_signed_in? && current_user.written_by_me?(board)
     .card_actions
       .dropdown
-        = image_tag 'actions.svg', class: 'dropbtn'
+        = image_tag 'actions.svg', class: 'dropbtn-mini'
         .dropdown-content.mini
           = link_to "Edit", edit_board_path(board)
           = link_to "Delete", board_path(board), data: { turbo_method: "delete", turbo_confirm: "本当に削除してもよろしいですか？" }

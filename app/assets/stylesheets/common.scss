@@ -24,7 +24,7 @@
 
   &.mini {
     min-width: 60px;
-    top: 20px;
+    top: 30px;
   }
 
   a {
@@ -38,4 +38,8 @@
       opacity: 0.7;
     }
   }
+}
+
+.dropbtn-mini {
+    margin-top: 20px;
 }

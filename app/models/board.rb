@@ -15,11 +15,11 @@
 #
 class Board < ApplicationRecord
     validates :title, presence: true
-    validates :title, length: { minimum: 1, maximum: 30 }
+    validates :title, length: { minimum: 1, maximum: 100 }
     validates :title, uniqueness: true
 
     validates :description, presence: true
-    validates :description, length: { minimum: 1, maximum: 200 }
+    validates :description, length: { minimum: 1, maximum: 500 }
     validates :description, uniqueness: true
 
     has_many :tasks, dependent: :destroy
