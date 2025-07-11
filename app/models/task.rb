@@ -35,4 +35,8 @@ class Task < ApplicationRecord
     def comments_count
         comments.count
     end
+
+    def commenting_users
+        comments.includes(:user).map(&:user).uniq
+    end
 end

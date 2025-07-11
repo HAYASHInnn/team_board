@@ -77,6 +77,17 @@ $avatar-size: 30px;
       height: $avatar-size;
       border-radius: 100%;
     }
+
+    &.comment-avatar {
+      flex-shrink: 0;
+
+      img {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin-left: -25px; // 重なりを調整
+      }
+    }
   }
 
   &_deadline {
