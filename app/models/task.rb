@@ -22,10 +22,10 @@ class Task < ApplicationRecord
     has_one_attached :eyecatch
 
     validates :title, presence: true
-    validates :title, length: { minimum: 1, maximum: 30 }
+    validates :title, length: { minimum: 1, maximum: 100 }
 
     validates :content, presence: true
-    validates :content, length: { minimum: 1, maximum: 200 }
+    validates :content, length: { minimum: 1, maximum: 500 }
 
     validates :deadline, presence: true
 
