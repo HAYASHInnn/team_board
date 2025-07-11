@@ -63,6 +63,9 @@ group :development, :test do
 
   # デバッグツール
   gem 'pry-byebug'
+
+  # 環境変数を管理するためのライブラリ
+  gem 'dotenv-rails'
 end
 
 group :development do
