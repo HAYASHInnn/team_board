@@ -6,25 +6,20 @@
   = form_with(model: @profile, url: profile_path, method: "put", local: true) do |f|
     .field_spacious
       = f.label :avatar, "Avatar"
-      %br/
       = f.file_field :avatar
-    .field
+    .field_spacious
       = f.label :nickname, "Name"
-      %br/
       = f.text_field :nickname, class: "text"
-    .field
+    .field_spacious
       = f.label :introduction, "Introduction"
-      %br/
       = f.text_area :introduction
     .field_spacious
       = f.label :gender, "Gender"
-      %br/
       = f.select :gender, Profile.genders.map { |k, v| [ I18n.t("enum.genders.#{k}"), k ]}, {}, { class: 'text' }
-    .field
+    .field_spacious
       = f.label :birthday, "Birthday"
-      %br/
       = f.date_field :birthday, class: 'text'
-    .field
+    .field_spacious
       = f.label :subscribed, "Get notifications"
       = f.check_box :subscribed
 

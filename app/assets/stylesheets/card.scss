@@ -18,6 +18,7 @@ $avatar-size: 30px;
   display: flex;
   flex-direction: column;
   padding: 12px 16px;
+  position: relative;
 
   &_image {
     width: 100%;
@@ -40,6 +41,7 @@ $avatar-size: 30px;
     display: flex;
     flex-direction: column;
     flex: 1;
+    position: relative; // ドロップダウンの基準位置
   }
 
   &_title_row {
@@ -52,7 +54,8 @@ $avatar-size: 30px;
   &_title {
     font-size: 18px;
     flex: 1;
-    min-width: 0; // flexアイテムの縮小を許可
+    min-width: 0;
+    margin-right: 40px; // アクションボタンのスペースを確保
   }
 
   &_description {
@@ -60,6 +63,7 @@ $avatar-size: 30px;
     margin-top: 0;
     margin-bottom: 16px;
     color: $text-secondary-color;
+    margin-right: 40px; // アクションボタンのスペースを確保
   }
 
   &_bottom {
@@ -112,6 +116,19 @@ $avatar-size: 30px;
   &_comment_count img {
     margin-left: 1px;
   }
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card_actions {
+  position: absolute;
+  top: 16px; // card_contentのpadding-topと合わせる
+  right: 16px; // cardのpaddingと合わせる
+  z-index: 10;
 }
 
 .card-add {
