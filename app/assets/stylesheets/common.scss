@@ -24,11 +24,12 @@
 
   &.mini {
     min-width: 60px;
-    top: 20%;
+    top: 20px;
   }
 
   a {
-    padding: 0px 14px 12px;
+    padding: 3px 14px;
+    margin: 5px 0;
     text-decoration: none;
     display: block;
     color: $text-base-color;
