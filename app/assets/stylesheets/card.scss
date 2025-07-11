@@ -90,6 +90,17 @@ $avatar-size: 30px;
       margin-right: 4px;
     }
   }
+
+  &_comment_count {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $text-secondary-color;
+    margin-left: auto;
+  }
+  &_comment_count img {
+    margin-left: 1px;
+  }
 }
 
 .card-add {

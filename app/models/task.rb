@@ -31,4 +31,8 @@ class Task < ApplicationRecord
 
     belongs_to :user
     belongs_to :board
+
+    def comments_count
+        comments.count
+    end
 end

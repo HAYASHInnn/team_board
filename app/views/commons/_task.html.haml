@@ -14,3 +14,6 @@
           = image_tag task.user.avatar_image
         .card_deadline
           = "期限：#{l(task.deadline, format: :long)}"
+        .card_comment_count
+          = "#{task.comments_count}"
+          = image_tag 'comment_icon.svg'
