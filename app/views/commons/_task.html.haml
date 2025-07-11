@@ -9,8 +9,15 @@
           = task.title
       .card_description
         = task.content
+      .card_deadline
+        = "期限：#{l(task.deadline, format: :long)}"
       .card_bottom
         .card_avatar
           = image_tag task.user.avatar_image
-        .card_deadline
-          = "期限：#{l(task.deadline, format: :long)}"
+        - task.commenting_users.each do |commenter|
+          .card_avatar.comment-avatar
+            = image_tag commenter.avatar_image
+
+        .card_comment_count
+          = "#{task.comments_count}"
+          = image_tag 'comment_icon.svg'

@@ -77,6 +77,17 @@ $avatar-size: 30px;
       height: $avatar-size;
       border-radius: 100%;
     }
+
+    &.comment-avatar {
+      flex-shrink: 0;
+
+      img {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin-left: -25px; // 重なりを調整
+      }
+    }
   }
 
   &_deadline {
@@ -89,6 +100,17 @@ $avatar-size: 30px;
       font-weight: 500;
       margin-right: 4px;
     }
+  }
+
+  &_comment_count {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $text-secondary-color;
+    margin-left: auto;
+  }
+  &_comment_count img {
+    margin-left: 1px;
   }
 }
 
