@@ -51,6 +51,8 @@ gem 'devise'
 # Sassコンパイラ
 gem 'sassc-rails'
 
+gem 'aws-sdk-s3', require: false
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[ mri windows ], require: 'debug/prelude'
@@ -63,6 +65,9 @@ group :development, :test do
 
   # デバッグツール
   gem 'pry-byebug'
+
+  # 環境変数を管理するためのライブラリ
+  gem 'dotenv-rails'
 end
 
 group :development do
