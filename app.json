@@ -1,0 +1,17 @@
+
+{
+  "name": "team_board",
+  "description": "This is team_board",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/HAYASHInnn/team_board",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:essential-0"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
